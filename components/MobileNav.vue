@@ -24,23 +24,21 @@ defineProps({
 
 const navLink = [
   { head: 'Home', to: '/' },
-  { head: 'About', to: '/' },
-  { head: 'Services', to: '/' },
-  { head: 'Use Cases', to: '/' },
-  { head: 'Technology', to: '/' },
-  { head: 'Payment Solution', to: '/' }
+  { head: 'About Us', to: '/#about' },
+  { head: 'Services', to: '/#services' },
+  { head: 'Testimonials', to: '/#testimonials' }
 ]
 </script>
 
 <template>
   <Transition name="slide-fade">
-    <div v-show="isOpen" class="h-100svh lg:hidden bg-e-primary flex flex-col  text-white">
+    <div v-show="isOpen" class="h-100svh lg:hidden bg-white flex flex-col  text-e-primary">
       <div class="flex justify-between items-center px-6">
         <NuxtLink to="/">
-          <!-- <img src="/images/Logo.svg" class="w18 lg-w24 hauto" /> -->
+          <img src="/images/Logo.png" class="w35 hauto" />
         </NuxtLink>
         <button class="px6 py2 my3 place-self-end" @click="$emit('closeNav')">
-          Close
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
       
@@ -49,14 +47,14 @@ const navLink = [
           v-for="item of navLink"
           :key="item.head"
           :to="item.to"
-          class="border-b border-white p-4 text-center block"
+          class="border-b border-e-primary p-4 text-center block"
         >
           {{ item.head }}
         </NuxtLink>
         <!-- <div flex-auto  /> -->
         <NuxtLink
           @click="goToContact()"
-          class="flex justify-center mt-20 border px-2 py-4"
+          class="flex justify-center mt-20 border border-e-primary px-2 py-4"
         >
           Get In Touch
         </NuxtLink>

@@ -9,7 +9,7 @@ useHead({
     class: 'font-sen antialiased text-gray-9',
   },
   link: [
-    { rel: 'icon', href: '/images/Logo.png' },
+    { rel: 'icon', href: '/fav.webp' },
   ],
   script: [
     { src: 'https://unpkg.com/@botpoison/browser', async: true },
@@ -21,7 +21,7 @@ useSeoMeta({
   titleTemplate: title => (title !== 'Your Spot rented' ? `${title} | Your Spot rented` : title),
   description: 'Your spot rented is a platform that handles your parking needs',
   ogSiteName: 'YourSpotrented',
-  ogImage: '',
+  ogImage: '/images/Logo.png',
   ogImageAlt: 'YourSpotrented'
 })
 </script>
