@@ -49,7 +49,7 @@
         
         <h2>9. Contact Us</h2>
         <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-        <address>
+        <address class="my4 text-e-secondary">
         YourSpotRented<br>
         801 S Wells Street, Chicago, IL, 60607<br>
         <a href="mailto:customer.support@yourspotrented.com" target="_blank">customer.support@yourspotrented.com</a><br>
@@ -67,8 +67,12 @@ h2{
     --uno: text-5 lg:text-6.5 fw600 my5 text-e-primary;
 }
 
-p{
+p, a, address{
     --uno: mb2 lt-md:text-3.5;
+}
+
+a{
+ --uno: text-e-primary
 }
 
 ul {
