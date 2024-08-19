@@ -8,7 +8,6 @@
             <div class="sm:relative bg-e-primary/70 rounded-4 text-6 sm:text-8 lg:text-11 fw800 text-white w-full sm:max-w-150 px6 py6 top-15 lt-sm:text-center">Turn Parking Spots Into Paid Rent</div>
             <button @click="goToContact" class="btn relative flex text-3.5 items-center gap-2 bg-e-primary px8 py3 rounded-2 text-white font-600 sm:absolute! sm:bottom-15 lt-sm:mx-auto lt-sm:mt14 lt-lg:mt18">
                 Get In Touch
-                <!-- <span class="group-hover:(w-31em h-15em)" /> -->
             </button>
         </div>
 

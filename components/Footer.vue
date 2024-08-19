@@ -12,7 +12,7 @@ const footerLinks = [
   {
     title: 'Our Contact',
     links: [
-      { head: 'customer.support@yourspotrented.com', to: 'mailto:' },
+      { head: 'Support@yourspotrented.com', to: 'mailto:' },
       { head: 'Contact Sales team:', to:''},
       { head: '(708) 475-0760', to: 'tel:' },
     ],
@@ -38,7 +38,6 @@ const year = new Date().getFullYear()
         </NuxtLink>
         <button @click="goToContact" class="btn relative flex lt-md:text-3 text-3.5 items-center gap-2 bg-e-primary px8 lt-md:px6 py3 rounded-2 text-white font-600">
           Get In Touch
-          <!-- <span class="group-hover:(w-31em h-15em)" /> -->
         </button>
       </div>
       <div class="flex-2/5 flex lt-lg:mt4 flex justify-between flex-wrap gap-y-6 py10">
@@ -46,7 +45,7 @@ const year = new Date().getFullYear()
           <h4 class="mb6 relative text-e-primary lg:text-4.25 fw500 before:(content-[''] absolute left-0 -bottom-2.5 h0.5 bg-e-primary w10 rounded-full)">
             {{ item.title }}
           </h4>
-          <NuxtLink v-if="item.title !== 'Contact'" v-for="list of item.links" :key="list.head" :to="list.to" class="text-3 lg:text-3.75 mb1.5 fw300 block hover:text-e-primary duration-400">
+          <NuxtLink v-if="item.title !== 'Contact'" v-for="list of item.links" :key="list.head" :to="list.to" class="text-3 lg:text-3.75 mb1.5 fw300 block hover:text-e-primary duration-400 lt-md:max-w-[160px]">
             {{ list.head }}
           </NuxtLink>
           <template v-else v-for="list of item.links" :key="list.to"  >
@@ -61,7 +60,6 @@ const year = new Date().getFullYear()
           <p mr1>
             Copyright {{ year }}
           </p>
-          <!-- <Icon name="ph:copyright" class="h3.5 w3.5 mt0.1" /> -->
           <p ml1>
             Yourspotrented.com. All rights reserved.
           </p>

@@ -21,7 +21,7 @@ useSeoMeta({
   titleTemplate: title => (title !== 'Your Spot rented' ? `${title} | Your Spot rented` : title),
   description: 'Your spot rented is a platform that handles your parking needs',
   ogSiteName: 'YourSpotrented',
-  ogImage: '/images/Logo.png',
+  ogImage: '/fav.webp',
   ogImageAlt: 'YourSpotrented'
 })
 </script>
