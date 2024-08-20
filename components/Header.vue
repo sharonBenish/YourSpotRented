@@ -9,7 +9,7 @@ const navLink = [
 
 <template>
   <header class="bg-white rounded text-e-primary shadow">
-    <div class="lt-2xl:w-site px4 2xl:px10 flex items-center justify-between h14 lg-h18 relative">
+    <div class="w-site px4 flex items-center justify-between h14 lg-h18 relative">
       <div class=" relative">
         <NuxtLink to="/">
           <img src="/images/Logo.png" class="w40 hauto" />
