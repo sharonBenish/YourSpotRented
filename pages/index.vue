@@ -1,4 +1,35 @@
 <script setup lang="ts">
+const loading = ref(false)
+const success = ref(false)
+
+const contactForm = ref({
+    name: '',
+    email: '',
+    message: '',
+})
+const FORMSPARK_ACTION_URL = "https://submit-form.com/5OVo1Yiz8"
+
+async function submitForm() {
+    success.value = false
+    loading.value = true
+    await fetch(FORMSPARK_ACTION_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify({
+        ...contactForm.value,
+        }),
+    }).then(()=>{
+        success.value = true;
+    }).catch(()=>{
+        alert("Couldn't submit form")
+    })
+    .finally(()=>{
+        loading.value = false
+    })
+}
 </script>
 
 <template>
@@ -143,23 +174,27 @@
             </div>
             <p class="lt-lg:text-3.5">Please contact us with as much information as possible including the location, start date, desired rental rate, and access directions.</p>
 
-            <form class="text-3.5 my10 flex flex-col lt-md:gap8 gap10">
+            <form class="text-3.5 my10 flex flex-col lt-md:gap8 gap10"  @submit.prevent="submitForm" incomplete-message="Please fill out all the required fields">
                 <div class="flex flex-col md:flex-row gap8 md:gap15">
                     <div class="wfull md:w-1/2 flex flex-col gap-2">
-                        <label>Name</label>
-                        <input type="text" placeholder="Enter name" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
+                        <label for="name">Name</label>
+                        <input v-model="contactForm.name" required id="name" name="name" type="text" placeholder="Enter name" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
                     </div>
                     <div class="wfull md:w-1/2 flex flex-col gap-2">
-                        <label>Email</label>
-                        <input type="mail" placeholder="Enter email" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
+                        <label for="email">Email</label>
+                        <input v-model="contactForm.email" required id="email" name="email" type="mail" placeholder="Enter email" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label>Message</label>
-                    <textarea placeholder="Enter your message" rows="5" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5"></textarea>
+                    <label for="message">Message</label>
+                    <textarea v-model="contactForm.message" required id="message" name="message" placeholder="Enter your message" rows="5" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5"></textarea>
                 </div>
-                <button class="self-end flex text-3.5 lt-md:text-3 lt-md:px6 items-center gap-2 bg-e-primary px10 py3 rounded-2 text-white font-600">
-                Submit
+                <div v-if="success" class="my5 p5 border border-dashed border-green-6 text-green-6">
+                    Thank you for reaching out, our team will review your inquiry and respond as soon as possible.
+                </div>
+                <button :disabled="loading" type="submit" class="self-end flex text-3.5 lt-md:text-3 lt-md:px6 items-center gap-2 bg-e-primary! px10 py3 rounded-2 text-white font-600">
+                    <span v-if="loading">Sending...</span>
+                    <span v-else>Submit</span>
                 <!-- <span class="group-hover:(w-31em h-15em)" /> -->
                 </button>
             </form>
