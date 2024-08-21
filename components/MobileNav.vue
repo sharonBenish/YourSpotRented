@@ -42,7 +42,7 @@ const navLink = [
         </button>
       </div>
       
-      <div class="px-6 flex flex-col flex-1 pb14">
+      <div class="px-6 flex flex-col flex-1 pb14" @click="$emit('closeNav')">
         <NuxtLink
           v-for="item of navLink"
           :key="item.head"

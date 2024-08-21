@@ -14,11 +14,8 @@ const scrollToSection = () => {
 
 export async function goToContact(){
     if (route.path === '/') {
-        // User is on the home page, scroll to contact
         scrollToSection()
       } else {
-        // User is not on the home page, navigate to home then scroll
-        // router.push('/#contact')
         navigateTo('/#contact')
       }
 }

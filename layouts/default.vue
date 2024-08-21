@@ -3,6 +3,7 @@ const route = useRoute()
 const mobileNavOpen = ref(false)
 
 watch(() => route.path, () => {
+  console.log('hi')
   mobileNavOpen.value = false
 })
 </script>
