@@ -50,26 +50,26 @@ async function submitForm() {
     <!--About us Section-->
     <div id="about" class="w-site py15">
         <div>
-            <h3 class="text-e-primary text-6 lg:text-8 fw800">Went Rent Parking</h3>
+            <h3 class="text-e-primary text-6 lg:text-8 fw800">Unlock the Earning Potential of Every Parking Space</h3>
             <div class="h2 w10 bg-e-secondary"></div>
         </div>
 
         <div class="flex flex-col md:flex-row gap-10 md:gap-5 lg:gap-8 flex-row justify-between my8">
-            <div class="wfull md:w-1/3 h80 lg:h95">
-                <img src="/images/corners.jpeg" class="h-[70%] md:h-[65%] lg:h-[70%] wfull object-cover" />
+            <div class="wfull md:w-1/3 h70 sm:h80 lg:h95">
+                <img src="/images/corner.jpeg" class="h-[70%] md:h-[65%] lg:h-[70%] wfull object-cover" />
                 <div class="bg-e-primary/80 flex flex-col justify-center text-white px8 md:px4 lg:px8 h-[30%] md:h-[35%] lg:h-[30%] rounded-b-4 text-center">
                     <h4 class="text-3.5 lg:text-4 fw600 mb2">In Tiny Corners</h4>
                     <p class="text-3.2 lg:text-3.5">Compact car only parking space in tiny corners are not a problem</p>
                 </div>
             </div>
-            <div class="wfull md:w-1/3 h80 lg:h95">
+            <div class="wfull md:w-1/3 h70 sm:h80 lg:h95">
                 <img src="/images/backyard.jpeg" class="h-[70%] md:h-[65%] lg:h-[70%] wfull object-cover" />
                 <div class="bg-e-secondary/80 flex flex-col justify-center text-white px8 md:px4 lg:px8 h-[30%] md:h-[35%] lg:h-[30%] rounded-b-4 text-center">
                     <h4 class="text-3.5 lg:text-4 fw600 mb2">In The Backyard</h4>
                     <p class="text-3.2 lg:text-3.5">Parking spot out back or a big lot, backyard parking is a specialty</p>
                 </div>
             </div>
-            <div class="wfull md:w-1/3 h80 lg:h95">
+            <div class="wfull md:w-1/3 h70 sm:h80 lg:h95">
                 <img src="/images/alley.jpeg" class="h-[70%] md:h-[65%] lg:h-[70%] wfull object-cover"  />
                 <div class="bg-e-primary/80 flex flex-col justify-center text-white px8 md:px4 lg:px8 h-[30%] md:h-[35%] lg:h-[30%] rounded-b-4 text-center">
                     <h4 class="text-3.5 lg:text-4 fw600 mb2">In The Alley</h4>
@@ -80,43 +80,44 @@ async function submitForm() {
     </div>
 
     <!--Services Section-->
-    <div id="services" class="bg-e-secondary/20 py15 lg:py25">
+    <div id="services" class="py15 lg:py25 bg-e-secondary/20">
         <div class="w-site">
             <div>
                 <h3 class="text-e-primary text-6 lg:text-8 fw800">Property Owners</h3>
                 <div class="h2 w10 bg-e-secondary"></div>
+                <h2 class="text-e-primary text-4.5 lg:text-5 fw500 my2">Is your property at its highest and best use?</h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap10 lg:gap15 mt10 lt-sm:px4 px6 md:px0">
-                <div class="h70 relative">
-                    <img src="/images/credit.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">Credit worthy tenants</div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap10 lg:gap30 mt10 lt-sm:px0 px6 md:px0">
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/worthy.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">Credit worthy tenants</div>
                 </div>
-                <div class="h70 relative">
-                    <img src="/images/rent.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">Rent premiums</div>
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/premiums.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">In some markets, we pay above market rent!</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">Rent premiums</div>
                 </div>
-                <div class="h70 relative">
-                    <img src="/images/partnership.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">Exclusive partnership</div>
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/partners.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">SpotHero  works with us only in certain locations!</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">Exclusive partnership</div>
                 </div>
-                <div class="h70 relative">
-                    <img src="/images/turnover.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">Reduced Turnover</div>
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/turn.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">Leases renewed year after year</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">Reduced Turnover</div>
                 </div>
-                <div class="h70 relative">
-                    <img src="/images/vacancy.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">No vacancy</div>
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/no-vacancy.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">Fill your spots when the residential market can’t!</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">No vacancy</div>
                 </div>
-                <div class="h70 relative">
-                    <img src="/images/advice.jpeg" class="h-[80%] w-full object-cover"/>
-                    <div class="bg-[#D9D9D9] text-e-primary h-[20%] flex items-center justify-center">Rent paid on time automatically</div>
-                    <div data-aos="fade-right" class="absolute bottom-20 -left-8 w-max bg-e-primary h9 flex justify-center px-8 items-center text-white rounded-tl-2.5 fw600">Expert Advice</div>
+                <div class="h50 xs:h60 relative">
+                    <img src="/images/advice.webp" class="h-[65%] sm:h-[80%] w-full object-cover bg-center"/>
+                    <div class="lt-xs:text-3.5 px-2 bg-[#D9D9D9] text-e-primary h-[35%] sm:h-[20%] flex items-center justify-center">Great direction, photos, and signage solve problems</div>
+                    <div data-aos="fade-right" class="absolute bottom-16 xs:bottom-20 -left-5 sm:-left-8 w-[150px] sm:w-max bg-e-primary lt-sm:text-3.5 h7 xs:h9 flex justify-center sm:px-8 items-center text-white rounded-tl-2.5 fw600">Expert Advice</div>
                 </div>
             </div>
 
