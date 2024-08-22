@@ -59,7 +59,7 @@ async function submitForm() {
                 <img src="/images/corner.jpeg" class="h-[65%] lg:h-[70%] wfull object-cover" />
                 <div class="bg-e-primary/80 flex flex-col justify-center text-white px8 md:px4 lg:px8 h-[35%] lg:h-[30%] rounded-b-4 text-center">
                     <h4 class="text-4 fw600 mb1">In Tiny Corners</h4>
-                    <p class="text-3.5">Compact car only parking space in tiny corners are not a problem</p>
+                    <p class="text-3.5">Parking spaces for compact cars in small corners are no hassle.</p>
                 </div>
             </div>
             <div class="wfull md:w-1/3 h70 sm:h80 lg:h95">
