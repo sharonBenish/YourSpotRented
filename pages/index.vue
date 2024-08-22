@@ -34,7 +34,7 @@ async function submitForm() {
 
 <template>
     <!--hero section-->
-    <div class="relative wfull bg-[url('/images/hero.jpeg')] bg-cover bg-center h50dvh md:h70dvh">
+    <div class="relative wfull bg-[url('/images/hero.png')] bg-cover bg-center h50dvh md:h70dvh">
         <div class="w-site px-0">
             <div class="absolute lt-sm:top-8 lt-sm:left-1/2 lt-sm:-translate-x-[50%] z-20 px-10 xl:px-0 hfull wfull">
                 <div class="sm:relative bg-e-primary/70 rounded-4 text-6 sm:text-8 lg:text-11 fw800 text-white w-full sm:max-w-150 px6 py6 top-15 lt-sm:text-center">Turn Parking Spots Into Paid Rent</div>
