@@ -5,6 +5,7 @@ const success = ref(false)
 const contactForm = ref({
     name: '',
     email: '',
+    address: '',
     message: '',
 })
 const FORMSPARK_ACTION_URL = "https://submit-form.com/5OVo1Yiz8"
@@ -185,6 +186,10 @@ async function submitForm() {
                         <label for="email">Email</label>
                         <input v-model="contactForm.email" required id="email" name="email" type="mail" placeholder="Enter email" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
                     </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="address">Address</label>
+                    <textarea v-model="contactForm.address" required id="address" name="address" placeholder="Enter your Address" rows="3" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5"></textarea>
                 </div>
                 <div class="flex flex-col gap-2">
                     <label for="message">Message</label>
