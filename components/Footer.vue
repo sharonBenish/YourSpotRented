@@ -14,7 +14,7 @@ const footerLinks = [
     links: [
       { head: 'Support@yourspotrented.com', to: 'mailto:' },
       { head: 'Contact Sales team:', to:''},
-      { head: '(708) 475-0760', to: 'tel:' },
+      { head: '+1 (331) 248-5707', to: 'tel:' },
     ],
   },
   {
