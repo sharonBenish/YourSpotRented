@@ -7,6 +7,7 @@ const contactForm = ref({
     email: '',
     address: '',
     message: '',
+    phone: ''
 })
 const FORMSPARK_ACTION_URL = "https://submit-form.com/5OVo1Yiz8"
 
@@ -177,14 +178,18 @@ async function submitForm() {
             <p class="lt-lg:text-3.5">Please contact us with as much information as possible including the location, start date, desired rental rate, and access directions.</p>
 
             <form class="text-3.5 my10 flex flex-col lt-md:gap8 gap10"  @submit.prevent="submitForm" incomplete-message="Please fill out all the required fields">
+                <div class="flex flex-col gap-2">
+                    <label for="address">Name</label>
+                    <input v-model="contactForm.name" required id="name" name="name" type="text" placeholder="Enter name" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
+                </div>
                 <div class="flex flex-col md:flex-row gap8 md:gap15">
-                    <div class="wfull md:w-1/2 flex flex-col gap-2">
-                        <label for="name">Name</label>
-                        <input v-model="contactForm.name" required id="name" name="name" type="text" placeholder="Enter name" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
-                    </div>
                     <div class="wfull md:w-1/2 flex flex-col gap-2">
                         <label for="email">Email</label>
                         <input v-model="contactForm.email" required id="email" name="email" type="mail" placeholder="Enter email" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
+                    </div>
+                    <div class="wfull md:w-1/2 flex flex-col gap-2">
+                        <label for="phone">Phone</label>
+                        <input v-model="contactForm.phone" required id="phone" name="phone" type="tel" placeholder="Enter phone number" class="outline-0 shadow-sm border-0 px4 py4 rounded-3.5" />
                     </div>
                 </div>
                 <div class="flex flex-col gap-2">
@@ -198,6 +203,8 @@ async function submitForm() {
                 <div v-if="success" class="my5 p5 border border-dashed border-green-6 text-green-6">
                     Thank you for reaching out, our team will review your inquiry and respond as soon as possible.
                 </div>
+                <p class="text-[14px] md:text-[16px] font-bold">SMS Terms of Service</p>
+                <p class="text-[14px] md:text-[16px] mt-[-20px]">By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Famous Parking. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See privacy policy at <a class="text-e-secondary font-bold underline cursor-pointer" href="https://famousparking.com/privacy" target="_blank">https://famousparking.com/privacy</a>. Message HELP for help. Reply STOP to any message to opt out.</p>
                 <button :disabled="loading" type="submit" class="self-end flex text-3.5 lt-md:text-3 lt-md:px6 items-center gap-2 bg-e-primary! px10 py3 rounded-2 text-white font-600">
                     <span v-if="loading">Sending...</span>
                     <span v-else>Submit</span>
