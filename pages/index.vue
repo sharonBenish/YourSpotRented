@@ -7,7 +7,8 @@ const contactForm = ref({
     email: '',
     address: '',
     message: '',
-    phone: ''
+    phone: '',
+    sms: "no"
 })
 const FORMSPARK_ACTION_URL = "https://submit-form.com/5OVo1Yiz8"
 
@@ -203,8 +204,21 @@ async function submitForm() {
                 <div v-if="success" class="my5 p5 border border-dashed border-green-6 text-green-6">
                     Thank you for reaching out, our team will review your inquiry and respond as soon as possible.
                 </div>
-                <p class="text-[14px] md:text-[16px] font-bold">SMS Terms of Service</p>
-                <p class="text-[14px] md:text-[16px] mt-[-20px]">By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Famous Parking. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See privacy policy at <a class="text-e-secondary font-bold underline cursor-pointer" href="https://famousparking.com/privacy" target="_blank">https://famousparking.com/privacy</a>. Message HELP for help. Reply STOP to any message to opt out.</p>
+                <p class="text-[14px] md:text-[16px] font-bold">YourSpotRented SMS Terms of Service</p>
+                <div class="flex gap-2 items-start -mt-6">
+                    <input type="checkbox" id="sms" name="sms" true-value="yes" false-value="no" v-model="contactForm.sms" class="mt-1.5"/>
+                    <div>
+                        <p>By opting into SMS from Famous Parking, you agree to receive text messages related to appointment scheduling, deal follow-ups, property management discussions, and assistance with concerns.</p>
+                        <ul>
+                            <li>Message frequency may vary.</li>
+                            <li>Message & data rates may apply.</li>
+                            <li>Reply HELP for assistance.</li>
+                            <li>Reply STOP to opt-out at any time.</li>
+                            <li>Visit our <a href="https://www.famousparking.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://www.famousparking.com/terms" target="_blank">Terms of Service</a> for more information.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <p class="text-[14px] md:text-[16px] mt-[-20px]">By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Famous Parking. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See privacy policy at <a class="text-e-secondary font-bold underline cursor-pointer" href="https://famousparking.com/privacy" target="_blank">https://famousparking.com/privacy</a>. Message HELP for help. Reply STOP to any message to opt out.</p> -->
                 <button :disabled="loading" type="submit" class="self-end flex text-3.5 lt-md:text-3 lt-md:px6 items-center gap-2 bg-e-primary! px10 py3 rounded-2 text-white font-600">
                     <span v-if="loading">Sending...</span>
                     <span v-else>Submit</span>
@@ -216,4 +230,28 @@ async function submitForm() {
 </template>
 
 <style>
+ol {
+    list-style-type: decimal; /* Ensures numbering */
+    margin: 0;                /* Resets default margin */
+    padding-left: 15px;       /* Provides space for numbers */
+    counter-reset: section;   /* Optional: if you are using counters */
+}
+
+ol li {
+    margin-bottom: 5px;       /* Space between list items */
+    counter-increment: section; /* Optional: if you are using counters */
+}
+
+ul {
+    list-style-type: disc; /* Ensures bullet points */
+    margin: 0;             /* Resets default margin */
+    padding-left: 15px;    /* Provides space for bullets */
+}
+ul li {
+    margin-bottom: 5px;    /* Space between list items */
+}
+
+a{
+    --uno: text-e-secondary text-underline
+}
 </style>
