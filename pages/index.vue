@@ -214,7 +214,7 @@ async function submitForm() {
                             <li>Message & data rates may apply.</li>
                             <li>Reply HELP for assistance.</li>
                             <li>Reply STOP to opt-out at any time.</li>
-                            <li>Visit our <a href="https://www.famousparking.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://www.famousparking.com/terms" target="_blank">Terms of Service</a> for more information.</li>
+                            <li>Visit our <a href="https://www.yourspotrented.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://www.yourspotrented.com/terms" target="_blank">Terms of Service</a> for more information.</li>
                         </ul>
                     </div>
                 </div>
